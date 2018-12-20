@@ -1,7 +1,9 @@
 import React from 'react';
+
 import Burger from '../../Burger/Burger';
 import Button from '../../UI/Button/Button';
-import classes from './CheckoutSummary.css'
+import classes from './CheckoutSummary.css';
+
 const CheckoutSummary = (props) => {
     return (
         <div className={classes.CheckoutSummary}>
@@ -11,10 +13,10 @@ const CheckoutSummary = (props) => {
             </div>
             <Button 
                 btnType="Danger"
-                clicked>CANCEL</Button>
+                clicked={props.onCheckoutCancelled}>CANCEL</Button>
             <Button 
                 btnType="Success"
-                clicked>CONTINUE</Button>
+                clicked={props.onCheckoutContinued}>CONTINUE</Button>
         </div>
         );
 }
